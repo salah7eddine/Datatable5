@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import {DataTablesModule} from "angular-datatables";
+import {HttpClientModule} from "@angular/common/http";
+import {DataService} from "./data.service";
 
 
 @NgModule({
@@ -10,9 +13,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,DataTablesModule,HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
